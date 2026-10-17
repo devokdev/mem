@@ -1,0 +1,27 @@
+{
+  "name": "memgc",
+  "version": "1.0.0",
+  "description": "Risk-Aware, Token-Budgeted Memory Garbage Collector for AI Coding Agents",
+  "author": "MemGC",
+  "mcpServers": {
+    "memgc": {
+      "command": "node",
+      "args": ["../../../../dist/mcp/index.js"],
+      "env": {
+        "MEMGC_URL": "http://localhost:3111",
+        "MEMGC_TOOLS": "all"
+      }
+    }
+  },
+  "skills": [
+    { "name": "recall", "command": "/recall", "description": "Hybrid search across past decisions and patterns." },
+    { "name": "remember", "command": "/remember", "description": "Directly forces persistent storage of critical knowledge." },
+    { "name": "handoff", "command": "/handoff", "description": "Seamlessly loads and resumes recent active session." },
+    { "name": "recap", "command": "/recap", "description": "Summarizes recent work and modifications across days." },
+    { "name": "session-history", "command": "/session-history", "description": "Displays visual chronological timeline." },
+    { "name": "commit-context", "command": "/commit-context", "description": "Traces exact source lines or files back to session." },
+    { "name": "commit-history", "command": "/commit-history", "description": "Lists git commits linked to agent tasks." },
+    { "name": "forget", "command": "/forget", "description": "Removes obsolete or sensitive observations." },
+    { "name": "gc-run", "command": "/gc-run", "description": "Triggers the token-budgeted memory garbage collector." }
+  ]
+}

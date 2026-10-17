@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "memgc": {
+      "command": "node",
+      "args": ["../../dist/mcp/index.js"],
+      "env": {
+        "MEMGC_URL": "http://localhost:3111",
+        "MEMGC_TOOLS": "all"
+      }
+    }
+  }
+}

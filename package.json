@@ -1,0 +1,42 @@
+{
+  "name": "memgc",
+  "version": "1.0.0",
+  "description": "Risk-Aware, Token-Budgeted Memory Garbage Collector for AI Coding Agents",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "memgc": "./bin/memgc.js",
+    "memgc-mcp": "./bin/mcp-server.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/index.js",
+    "mcp": "node dist/mcp/index.js",
+    "plugin:demo": "tsx scripts/verify-demo.ts",
+    "test": "vitest run"
+  },
+  "keywords": [
+    "memory",
+    "garbage-collection",
+    "ai-agents",
+    "mcp",
+    "context-window",
+    "token-budget"
+  ],
+  "author": "MemGC Contributors",
+  "license": "MIT",
+  "dependencies": {
+    "better-sqlite3": "^11.8.1",
+    "ws": "^8.18.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.12",
+    "@types/node": "^22.13.4",
+    "@types/ws": "^8.5.14",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.5"
+  }
+}
